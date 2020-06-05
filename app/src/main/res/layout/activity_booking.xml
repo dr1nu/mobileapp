@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".booking">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Spinner
+        android:id="@+id/sport"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:background="#00FFFFFF"
+
+        android:dropDownWidth="match_parent"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Spinner
+        android:id="@+id/localities"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FFFFFF"
+        android:dropDownWidth="match_parent"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sport" />
+
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="Enter Date"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/localities" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/date">
+
+        <EditText
+            android:id="@+id/startTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:hint="Start Time"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/endTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="End Time"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="149dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:text="Book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
